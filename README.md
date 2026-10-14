@@ -1,51 +1,21 @@
-# Lab 5: Static Code Analysis — Wildlife Sanctuary Sightings Log
+# Lab 5: Wildlife Sightings
 
-**Your file:** `wildlife_sightings.py`
+## Files
 
-Follow the lab handout for the full instructions.
+- `wildlife_sightings.py`: corrected program.
+- `issues.md`: problems found in the starter code and their fixes.
+- `reflection.md`: four short reflection answers. Check them against the lab handout.
+- `run_analysis.bat`: runs the program and creates the Pylint, Bandit, and Flake8 reports.
+- `SUBMISSION_NOTES.txt`: final submission steps.
 
-## About the program
+## Run the program
 
-A sightings log for a wildlife sanctuary. It records which species were seen in which zone, summarises each zone and finds the rarest species.
+```bash
+python wildlife_sightings.py
+```
 
-The code works, but only just. It has quality, style and security problems of the kind Pylint, Flake8 and Bandit are built to find.
+## Create the reports
 
-## What to do
+On Windows, run `run_analysis.bat`. It installs the three analysis tools and saves their output in `pylint_report.txt`, `bandit_report.txt`, and `flake8_report.txt`.
 
-1. **Run it first** and read the output carefully:
-   ```bash
-   python wildlife_sightings.py
-   ```
-   It runs a short demonstration and may create a small output file in the current folder, so run it from a folder you don't mind adding files to.
-
-2. **Install the tools:**
-   ```bash
-   pip install pylint bandit flake8
-   ```
-
-3. **Run the analysis** and save the reports:
-   ```bash
-   pylint wildlife_sightings.py > pylint_report.txt
-   bandit -r wildlife_sightings.py > bandit_report.txt
-   flake8 wildlife_sightings.py > flake8_report.txt
-   ```
-
-4. **Document the issues** in `issues.md` using this table (at least 4 rows, high and medium severity first):
-
-   | Issue | Type | Line(s) | Description | Fix Approach |
-   |-------|------|---------|-------------|--------------|
-   | ... | ... | ... | ... | ... |
-
-5. **Fix the code.** Fix at least 4 of the issues you documented, then rerun all three tools to confirm they are gone. Repeat until you are satisfied. The program should still do its job when you are done.
-
-6. **Reflect.** Answer the four reflection questions from the handout in `reflection.md`.
-
-## Deliverables
-
-1. `wildlife_sightings.py`: your cleaned version, with at least 4 issues fixed.
-2. `issues.md`: the completed issue table.
-3. `reflection.md`: your answers to the reflection questions.
-
-**Target:** aim for a Pylint score above 9.5 on your final file. A perfect 10.00/10 is very good.
-
-Be ready to explain the bugs you found and how you fixed them. You may be called on to present.
+Review the reports before submitting. The reports are not included yet because the tools could not be installed in the preparation environment.
